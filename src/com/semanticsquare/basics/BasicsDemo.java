@@ -15,16 +15,22 @@ class BasicsDemo {
       Number - Integer ( byte, short, int, long) - Singed Two's complement, Floating ( float, double), Character (char);
       Boolean - True, False
        */
+
+      // Int
       System.out.println("\n\nInside Primitives ");
       int intHex = 0x0041; System.out.println("Hex: "+ intHex);
       int intBin = 0b010101; System.out.println("Bin: "+ intBin);
       int intUnderscore = 1_23_456; System.out.println("UnderScore: "+ intUnderscore);
 
+      // Char
       char charA = 'A'; System.out.println("charA: "+ charA);
       char charInt = 65; System.out.println("charInt: "+charInt);
       char charUnicode1 = '\u0041'; System.out.println("charUniCode1: "+charUnicode1);
       char charHex = 0x41; System.out.println("charUniCode2: "+ charHex);
       char charBinary = 0b01000001; System.out.println("charBinary: "+charBinary);
+
+      // Boolean
+      boolean isInsured = true;
 
   }
   public static void main(String[] args) {
