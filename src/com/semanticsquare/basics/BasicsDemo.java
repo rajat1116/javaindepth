@@ -9,18 +9,20 @@ class BasicsDemo {
     System.out.print(" ");                // Print a space
     System.out.print("world!!");
   }
-  
-  public static void main(String[] args) {	
-	   	// Language Basics 1
-		print();
-		int i = 6;
-		int j = 2;
-
-		// Operations
-		System.out.println(i +j);
-		System.out.println(i-j);
-		System.out.println(i / j);
-		System.out.print(i * j);
+  static void primitives(){
+      // Primitive Type
+      /*
+      Number - Integer ( byte, short, int, long) - Singed Two's complement, Floating ( float, double), Character (char);
+      Boolean - True, False
+       */
+      System.out.println("\n\nInside Primitives ");
+      int intHex = 0x0041; System.out.println("Hex: "+ intHex);
+      int intBin = 0b010101; System.out.println("Bin: "+ intBin);
+      int intUnderscore = 1_23_456; System.out.println("UnderScore: "+ intUnderscore);
+  }
+  public static void main(String[] args) {
+      print();
+      primitives();
 
 
   }       
