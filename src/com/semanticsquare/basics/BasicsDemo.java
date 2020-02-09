@@ -23,7 +23,7 @@ class BasicsDemo {
       char charA = 'A'; System.out.println("charA: "+ charA);
       char charInt = 65; System.out.println("charInt: "+charInt);
       char charUnicode1 = '\u0041'; System.out.println("charUniCode1: "+charUnicode1);
-      char charUniCode2 = 0x41; System.out.println("charUniCode2: "+ charUniCode2);
+      char charHex = 0x41; System.out.println("charUniCode2: "+ charHex);
       char charBinary = 0b01000001; System.out.println("charBinary: "+charBinary);
 
   }
