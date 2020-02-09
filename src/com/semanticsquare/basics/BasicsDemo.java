@@ -19,6 +19,13 @@ class BasicsDemo {
       int intHex = 0x0041; System.out.println("Hex: "+ intHex);
       int intBin = 0b010101; System.out.println("Bin: "+ intBin);
       int intUnderscore = 1_23_456; System.out.println("UnderScore: "+ intUnderscore);
+
+      char charA = 'A'; System.out.println("charA: "+ charA);
+      char charInt = 65; System.out.println("charInt: "+charInt);
+      char charUnicode1 = '\u0041'; System.out.println("charUniCode1: "+charUnicode1);
+      char charUniCode2 = 0x41; System.out.println("charUniCode2: "+ charUniCode2);
+      char charBinary = 0b01000001; System.out.println("charBinary: "+charBinary);
+
   }
   public static void main(String[] args) {
       print();
