@@ -15,9 +15,13 @@ class BasicsDemo {
 		print();
 		int i = 6;
 		int j = 2;
+
+		// Operations
 		System.out.println(i +j);
 		System.out.println(i-j);
 		System.out.println(i / j);
 		System.out.print(i * j);
+
+
   }       
 }
