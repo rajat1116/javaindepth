@@ -1,4 +1,32 @@
 class BasicsDemo {
+    static void typeCasting(){
+        System.out.println("\n\nInside Type Casting...");
+        // Explicit casting
+        long y = 42;
+        //int x = y;
+        int x = (int) y;
+
+        // Information loss due to out-of-range assignment
+        byte narrowByte = (byte)123456;
+        System.out.println("narrowByte: "+narrowByte);
+
+        // Truncated
+        int iTruncated = (int)0.99;
+        System.out.println("iTruncated: "+ iTruncated);
+
+        // Implicit cast (int to long)
+        y = x;
+
+        // Implicit cast (char to int)
+        char cChar = 'A';
+        int iInt = cChar;
+        System.out.println("iInt: "+iInt);
+
+        // byte to char using an explicit cast
+        byte bByte = 65;
+        cChar = (char) bByte; // special conversion (widening from byte --> int followed by narrowing from int --> char)
+        System.out.println("cChar: "+cChar);
+    }
 
   static void print() {
     System.out.println("\n\nInside print ...");
@@ -42,10 +70,17 @@ class BasicsDemo {
       System.out.println("amountPaidByInsurance: "+amountPaidByInsurance);
       System.out.println("amountPaidByPatient: "+amountPaidByPatient);
 
+      // Type Casting
+      /*
+      Only numeric to numeric casting is possible
+      cannot cast to boolean or vice versa
+       */
+
   }
   public static void main(String[] args) {
       print();
       primitives();
+      typeCasting();
 
 
   }       
