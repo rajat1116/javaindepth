@@ -1,4 +1,32 @@
 class BasicsDemo {
+    static void typeCasting(){
+        System.out.println("\n\nInside Type Casting...");
+        // Explicit casting
+        long y = 42;
+        //int x = y;
+        int x = (int) y;
+
+        // Information loss due to out-of-range assignment
+        byte narrowByte = (byte)123456;
+        System.out.println("narrowByte: "+narrowByte);
+
+        // Truncated
+        int iTruncated = (int)0.99;
+        System.out.println("iTruncated: "+ iTruncated);
+
+        // Implicit cast (int to long)
+        y = x;
+
+        // Implicit cast (char to int)
+        char cChar = 'A';
+        int iInt = cChar;
+        System.out.println("iInt: "+iInt);
+
+        // byte to char using an explicit cast
+        byte bByte = 65;
+        cChar = (char) bByte; // special conversion (widening from byte --> int followed by narrowing from int --> char)
+        System.out.println("cChar: "+cChar);
+    }
 
   static void print() {
     System.out.println("\n\nInside print ...");
@@ -9,18 +37,50 @@ class BasicsDemo {
     System.out.print(" ");                // Print a space
     System.out.print("world!!");
   }
-  
-  public static void main(String[] args) {	
-	   	// Language Basics 1
-		print();
-		int i = 6;
-		int j = 2;
+  static void primitives(){
+      // Primitive Type
+      /*
+      Number - Integer ( byte, short, int, long) - Singed Two's complement, Floating ( float, double), Character (char);
+      Boolean - True, False
+       */
 
-		// Operations
-		System.out.println(i +j);
-		System.out.println(i-j);
-		System.out.println(i / j);
-		System.out.print(i * j);
+      // Int
+      System.out.println("\n\nInside Primitives ");
+      int intHex = 0x0041; System.out.println("Hex: "+ intHex);
+      int intBin = 0b010101; System.out.println("Bin: "+ intBin);
+      int intUnderscore = 1_23_456; System.out.println("UnderScore: "+ intUnderscore);
+
+      // Char
+      char charA = 'A'; System.out.println("charA: "+ charA);
+      char charInt = 65; System.out.println("charInt: "+charInt);
+      char charUnicode1 = '\u0041'; System.out.println("charUniCode1: "+charUnicode1);
+      char charHex = 0x41; System.out.println("charUniCode2: "+ charHex);
+      char charBinary = 0b01000001; System.out.println("charBinary: "+charBinary);
+
+      // Boolean
+      boolean isInsured = true;
+      double coverageByInsurance = 0.8;
+      double billAmount = 1000.0;
+      double amountPaidByInsurance = 0.0;
+      double amountPaidByPatient = billAmount;
+      if(isInsured){
+          amountPaidByInsurance = billAmount * coverageByInsurance;
+          amountPaidByPatient = billAmount - amountPaidByInsurance;
+      }
+      System.out.println("amountPaidByInsurance: "+amountPaidByInsurance);
+      System.out.println("amountPaidByPatient: "+amountPaidByPatient);
+
+      // Type Casting
+      /*
+      Only numeric to numeric casting is possible
+      cannot cast to boolean or vice versa
+       */
+
+  }
+  public static void main(String[] args) {
+      print();
+      primitives();
+      typeCasting();
 
 
   }       
