@@ -31,6 +31,16 @@ class BasicsDemo {
 
       // Boolean
       boolean isInsured = true;
+      double coverageByInsurance = 0.8;
+      double billAmount = 1000.0;
+      double amountPaidByInsurance = 0.0;
+      double amountPaidByPatient = billAmount;
+      if(isInsured){
+          amountPaidByInsurance = billAmount * coverageByInsurance;
+          amountPaidByPatient = billAmount - amountPaidByInsurance;
+      }
+      System.out.println("amountPaidByInsurance: "+amountPaidByInsurance);
+      System.out.println("amountPaidByPatient: "+amountPaidByPatient);
 
   }
   public static void main(String[] args) {
