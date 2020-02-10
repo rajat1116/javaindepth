@@ -77,10 +77,14 @@ class BasicsDemo {
        */
 
   }
+  static int count = 25;
+  //count=25;
+
   public static void main(String[] args) {
       print();
       primitives();
       typeCasting();
+      count = 25;
 
 
   }       
