@@ -27,8 +27,7 @@ class BasicsDemo {
         cChar = (char) bByte; // special conversion (widening from byte --> int followed by narrowing from int --> char)
         System.out.println("cChar: "+cChar);
     }
-
-  static void print() {
+    static void print() {
     System.out.println("\n\nInside print ...");
     System.out.println("Hello, world!!"); // Advance cursor to beginning of next line
     System.out.println();                 // Print empty line
@@ -80,12 +79,17 @@ class BasicsDemo {
   static int count = 25;
   //count=25;
 
+    static void arrays(){
+        System.out.println("\n\nInside arrays...");
+        int[] myArray = new int[] {9,11,2,5,4,4,6};
+        System.out.print("myArray.length: "+ myArray.length);
+    }
+
   public static void main(String[] args) {
       print();
       primitives();
       typeCasting();
       count = 25;
-
-
+      arrays();
   }       
 }
