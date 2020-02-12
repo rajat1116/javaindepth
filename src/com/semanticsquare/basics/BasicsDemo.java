@@ -36,7 +36,7 @@ class BasicsDemo {
     System.out.print(" ");                // Print a space
     System.out.print("world!!");
   }
-  static void primitives(){
+    static void primitives(){
       // Primitive Type
       /*
       Number - Integer ( byte, short, int, long) - Singed Two's complement, Floating ( float, double), Character (char);
@@ -76,9 +76,8 @@ class BasicsDemo {
        */
 
   }
-  static int count = 25;
-  //count=25;
-
+    static int count = 25;
+    //count=25;
     static void arrays(){
         System.out.println("\n\nInside arrays...");
         int[] myArray = new int[] {9,11,2,5,4,4,6};
