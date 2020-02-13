@@ -83,6 +83,38 @@ class BasicsDemo {
         int[] myArray = new int[] {9,11,2,5,4,4,6};
         System.out.print("myArray.length: "+ myArray.length);
     }
+    static void threeDimensionalArrays(){
+        System.out.println("\nInside threeDimensionalArray...");
+        int[][][] unitsSold = new int[][][]{
+                {
+                    //New York
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,850,0,0}
+                },
+                {
+                    // San Franciso
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0}
+                },
+                {
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0}
+                },
+                {
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0},
+                        {0,0,0,0}
+                }
+        };
+        System.out.println("unitSold[0][3][1]: "+unitsSold[0][3][1]);
+    }
 
   public static void main(String[] args) {
       print();
@@ -90,5 +122,6 @@ class BasicsDemo {
       typeCasting();
       count = 25;
       arrays();
+      threeDimensionalArrays();
   }       
 }
