@@ -12,7 +12,24 @@ public class CurrencyConverter {
     int Rupee = 63;
      */
 
-    int[] exchangeRates = new int[] {63,3,3,595,18,107,2,0,63};
+    double[] exchangeRates;
+    void setExchangeRates(double[] rates){
+        exchangeRates = rates;
+    }
+
+    void updateExchangeRates(int arrayIndex, double newVal){
+        exchangeRates[arrayIndex] = newVal;
+    }
+
+    double getExchangeRates(int arrayIndex){
+       return exchangeRates[arrayIndex];
+    }
+
+    double computeTransferAmount(int arrayIndex, double amount){
+        return amount * getExchangeRates(arrayIndex);
+    }
+
+
 
 
 
@@ -30,7 +47,17 @@ public class CurrencyConverter {
 
     public static void main(String[] args){
         CurrencyConverter cc= new CurrencyConverter();
+        double[] rates = {63.0,3.0,3.0,595.5,18.0,107.0,2.0,0.0,63.0};
+        cc.setExchangeRates(rates);
         cc.printCurrencies();
+
+        rates = new double[]{64.0,3.0,3.0,595.5,18.0,107.0,2.0,0.0,63.0};
+        cc.setExchangeRates(rates);
+        cc.printCurrencies();
+        cc.updateExchangeRates(0, 67.0);
+
+        double amount = cc.computeTransferAmount(0,1000);
+        System.out.println(amount);
 
 
     }
