@@ -126,21 +126,31 @@ class BasicsDemo {
     static boolean search(int[] list, int key){
         return true;
     }
+    static void go(int[] array){
+        System.out.println("Array[0]: "+ array[0]);
+        System.out.println("Array[1]: "+ array[1]);
+        array[1] = 22;
+    }
 
   public static void main(String[] args) {
-      print();
-      primitives();
-      typeCasting();
-      count = 25;
-      arrays();
-      threeDimensionalArrays();
-      double d = sum(3.0, 2.0);
-      float e = (float) sum(4.0, 6.0);
-      System.out.println(d);
-      System.out.println(e);
-      double f = avg(5.0, 7.0);
-      System.out.println(f);
-      int[] list ={1,2};
-      search(list,2);
+        /*
+        print();
+        primitives();
+        typeCasting();
+        count = 25;
+        arrays();
+        threeDimensionalArrays();
+        double d = sum(3.0, 2.0);
+        float e = (float) sum(4.0, 6.0);
+        System.out.println(d);
+        System.out.println(e);
+        double f = avg(5.0, 7.0);
+        System.out.println(f);
+        int[] list ={1,2};
+        search(list,2);
+         */
+        int[] array = {1,2};
+        go(array);
+        System.out.println("Array[1]: "+ array[1]);
   }       
 }

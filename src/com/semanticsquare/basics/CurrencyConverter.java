@@ -31,8 +31,6 @@ public class CurrencyConverter {
 
 
 
-
-
     void printCurrencies(){
         System.out.println("rupee: " + exchangeRates[0]);
         System.out.println("dirham: " + exchangeRates[1]);
@@ -40,9 +38,8 @@ public class CurrencyConverter {
         System.out.println("chilean_peso: "+ exchangeRates[3]);
         System.out.println("mexican_peso:" + exchangeRates[4]);
         System.out.println("_yen: "+ exchangeRates[5]);
-        System.out.println("dollar: " + exchangeRates[7]);
-        System.out.println("Rupee: "+ exchangeRates[8]);
         System.out.println("$australian: " + exchangeRates[6]);
+        System.out.println("dollar: " + exchangeRates[7]);
     }
 
     public static void main(String[] args){
@@ -55,10 +52,6 @@ public class CurrencyConverter {
         cc.setExchangeRates(rates);
         cc.printCurrencies();
         cc.updateExchangeRates(0, 67.0);
-
-        double amount = cc.computeTransferAmount(0,1000);
-        System.out.println(amount);
-
 
     }
 }
