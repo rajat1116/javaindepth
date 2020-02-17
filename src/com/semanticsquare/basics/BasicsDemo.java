@@ -126,6 +126,12 @@ class BasicsDemo {
     static boolean search(int[] list, int key){
         return true;
     }
+    static void go(int i){
+        System.out.println(i);
+    }
+    static void go(short s){
+        System.out.println(s);
+    }
     static void go(int[] array){
         System.out.println("Array[0]: "+ array[0]);
         System.out.println("Array[1]: "+ array[1]);
@@ -152,5 +158,8 @@ class BasicsDemo {
         int[] array = {1,2};
         go(array);
         System.out.println("Array[1]: "+ array[1]);
+        go(1000);
+        byte b = 22;
+        go(b);
   }       
 }
