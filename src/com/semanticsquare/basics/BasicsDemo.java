@@ -153,7 +153,7 @@ class BasicsDemo {
         print();
         primitives();
         typeCasting();
-        count = 25;
+        count = 25; 
         arrays();
         threeDimensionalArrays();
         double d = sum(3.0, 2.0);
