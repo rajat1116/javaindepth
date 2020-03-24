@@ -147,7 +147,30 @@ class BasicsDemo {
         System.out.println("\nInside varargsOverload with varargs....");
         System.out.println("list.length: "+list.length);
     }
-
+    static void preAndPost(){
+        System.out.println("\nInside preAndPost...");
+        int x = 5;
+        x++;
+        x--;
+        ++x;
+        --x;
+        int y = x;
+        System.out.println("x: "+x+", y: "+y);
+        int ind = 0;
+        int[] array = new int[3];
+        array[ind] = 10;
+        array[++ind] = 20;
+        array[++ind] = 30;
+        System.out.println("ind: "+ind);
+    }
+    static void compoundArithmeticAssignment(){
+        int x = 100;
+        System.out.println("x += 5: "+(x += 5));
+        System.out.println("x -= 5: "+(x -= 5));
+        System.out.println("x *= 5: "+(x *= 5));
+        System.out.println("x /= 5: "+(x /= 5));
+        System.out.println("x %= 5: "+(x %= 5));
+    }
   public static void main(String[] args) {
         /*
         print();
@@ -175,5 +198,8 @@ class BasicsDemo {
         varargsOverload(true, 1,2,3);
         varargsOverload(true,1, 2, 3, 4, 5, 6, 7, 8);
         varargsOverload(true);
+        preAndPost();
+        compoundArithmeticAssignment();
+
   }       
 }
