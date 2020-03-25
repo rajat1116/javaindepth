@@ -174,6 +174,20 @@ class BasicsDemo {
     static void isOddOrEven(int num){
         System.out.println(num % 2);
     }
+    static void chartypePromotion(){
+        System.out.println("\nInside chartypePromotion...");
+        char char1 = 50; // will be assigned corresponding UTF16 value 2
+        System.out.println("char1: "+char1);
+        System.out.println("(73 - char1): "+ (73 - char1)); // char1 gets promoted to int
+        System.out.println("(char1 - '3'): "+ (char1 - '3')); // char1 and '3' gets promoted to int
+
+        /*
+        ~ Operation precendence rule
+        ~ Operand promotion rule
+        ~ same-type operation rule
+        ~ mixed-type operation rule
+         */
+    }
 
   public static void main(String[] args) {
         /*
@@ -205,6 +219,7 @@ class BasicsDemo {
         preAndPost();
         compoundArithmeticAssignment();
         isOddOrEven(50);
+        chartypePromotion();
 
   }       
 }
