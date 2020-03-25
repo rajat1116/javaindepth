@@ -171,6 +171,10 @@ class BasicsDemo {
         System.out.println("x /= 5: "+(x /= 5));
         System.out.println("x %= 5: "+(x %= 5));
     }
+    static void isOddOrEven(int num){
+        System.out.println(num % 2);
+    }
+
   public static void main(String[] args) {
         /*
         print();
@@ -200,6 +204,7 @@ class BasicsDemo {
         varargsOverload(true);
         preAndPost();
         compoundArithmeticAssignment();
+        isOddOrEven(50);
 
   }       
 }
