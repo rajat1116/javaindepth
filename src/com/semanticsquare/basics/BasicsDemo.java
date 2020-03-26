@@ -188,6 +188,37 @@ class BasicsDemo {
         ~ mixed-type operation rule
          */
     }
+    static void comparisionOperators(){
+        int age = 20;
+        if (age > 21) {
+            System.out.println("Graduate student");
+        }
+        System.out.println("age > 21: "+ (age > 21));
+        System.out.println("age >= 21: "+ (age >= 21));
+        System.out.println("age < 21: "+ (age < 21));
+        System.out.println("age <= 21: "+ (age <= 21));
+        System.out.println("age == 21: "+ (age == 21));
+        System.out.println("age != 21: "+ (age != 21));
+
+        boolean isIngternational = true;
+       // System.out.println("isInternational <= true: "+ (isIngternational <= true)); // throws error
+        System.out.println("isInternational == true: "+ (isIngternational == true));
+        System.out.println("isInternational != true: "+ (isIngternational != true));
+
+        Student s1 = new Student(1000, "Rajat");
+        Student s2 = new Student(1000, "Rajat");
+        System.out.println("s1 == s2: "+ (s1 == s2));
+        System.out.println("s1 != s2: "+ (s1 != s2));
+
+        update(null, "John");
+    }
+    static boolean update(Student s, String name){
+        if(s == null){
+            return false;
+        }
+        s.name = name;
+        return true;
+    }
 
   public static void main(String[] args) {
         /*
@@ -220,6 +251,7 @@ class BasicsDemo {
         compoundArithmeticAssignment();
         isOddOrEven(50);
         chartypePromotion();
+        comparisionOperators();
 
   }       
 }
