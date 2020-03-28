@@ -283,6 +283,33 @@ class BasicsDemo {
         // System.out.println("d1 | d2: " + (d1 | d2))
 
     }
+    static boolean ifStatement(){
+        boolean approved = false;
+        int age = 37;
+        int salary = 70000;
+        boolean hasBadCredit = false;
+        if(age >= 25 && age <= 35 && salary >= 50000){
+            approved = true;
+            System.out.println("age >= 25 && age <= 35 && salary >= 5000");
+        }
+        else if (age >= 36 && age <= 45 && salary >= 70000){
+            approved = true;
+            System.out.println("age >= 36 && age <= 45 && salary >= 70000");
+        }
+        else if(age > 45 && age <= 55 && salary >= 90000){
+            approved = true;
+            System.out.println("age > 45 && age <= 55 && salary >= 90000");
+        }
+        else {
+            if (age > 55 && !hasBadCredit){
+                approved = true;
+                System.out.println("age > 55 && !hasBadCredit");
+            }
+            System.out.println("else block");
+        }
+        System.out.println("outside if");
+        return approved;
+    }
   public static void main(String[] args) {
         /*
         print();
@@ -317,6 +344,7 @@ class BasicsDemo {
         comparisionOperators();
         logicalOperators();
         bitwiseOperators();
+        System.out.println(ifStatement());
 
   }       
 }
