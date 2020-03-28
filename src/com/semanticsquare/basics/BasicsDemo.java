@@ -225,17 +225,24 @@ class BasicsDemo {
         int salary = 95000;
         boolean hasBadCredit = false;
 
-        // 1. Core (AND, OR, NOT & Operator Chaning)
+        // 1. Core (AND, OR, NOT & Operator Chaining)
 
-        if (age > 35 && salary > 90000){
+        if (age > 35 && salary > 90000 && !hasBadCredit){
             System.out.println("Loan approved");
         } else {
-            System.out.println("Loan rejected");
+            System.out.println("Loan not approved");
         }
 
         // 2.
-        //  (a) Left-ass0ciated ~Order of grouping
+        //  (a) Left-associated ~ Order of grouping
         //  (b) Associativity (a && b) && c = a && (b && c)
+        if ((age > 35 && salary > 90000 ) && !hasBadCredit){
+            System.out.println("Loan approved");
+        } else {
+            System.out.println("Loan not approved");
+        }
+
+
 
 
         // 3.
@@ -244,6 +251,11 @@ class BasicsDemo {
         //                 A && B && C || D = ((A && B) && C) ||  D
         //  (b). Operator Precedence across logical, comparision and arithmetic ! > arithmetic > comparison > &&. ||
 
+        if ((age > 35 && salary > 90000 ) || (!hasBadCredit)){
+            System.out.println("Loan approved");
+        } else {
+            System.out.println("Loan not approved");
+        }
         // ALWAYS USE PARENTHESIS for READABILITY, not everyone is aware of precedence
 
         // 4. Use && to avoid NullPointerException
@@ -283,6 +295,7 @@ class BasicsDemo {
         isOddOrEven(50);
         chartypePromotion();
         comparisionOperators();
+        logicalOperators();
 
   }       
 }
