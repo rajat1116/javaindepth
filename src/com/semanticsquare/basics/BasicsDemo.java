@@ -310,6 +310,20 @@ class BasicsDemo {
         System.out.println("outside if");
         return approved;
     }
+    static void switchExample(){
+        System.out.println("\nInside switchExample...");
+        int month = 3;
+        switch (month){
+            case 1: System.out.println("Jan");
+            break;
+            case 2: System.out.println("Feb");
+            break;
+            case 3: System.out.println("March");
+            break;
+            default: System.out.println("April");
+        }
+    }
+
   public static void main(String[] args) {
         /*
         print();
@@ -345,6 +359,7 @@ class BasicsDemo {
         logicalOperators();
         bitwiseOperators();
         System.out.println(ifStatement());
+        switchExample();
 
   }       
 }
