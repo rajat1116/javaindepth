@@ -323,7 +323,10 @@ class BasicsDemo {
             default: System.out.println("April");
         }
     }
-
+    static int min(int x, int y){
+        int res = ( x < y) ? x : y;
+        return res;
+    }
   public static void main(String[] args) {
         /*
         print();
@@ -360,6 +363,79 @@ class BasicsDemo {
         bitwiseOperators();
         System.out.println(ifStatement());
         switchExample();
+        int min = min(9,3);
+        System.out.println("min: "+min);
+
+        int[] iArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for(int i = 0; i < iArray.length; i++){
+            System.out.println(iArray[i]);
+        }
+      //  for(int i = 0; i < iArray.length; System.out.println(iArray[i++]));
+
+        for(int i = 0, j = iArray.length - 1; i < j; i++, j--){
+            int temp = iArray[i];
+            iArray[i] = iArray[j];
+            iArray[j] = temp;
+        }
+        for(int i = 0; i < iArray.length; i++){
+            System.out.print(iArray[i]+" ");
+        }
+
+      for(int i = 0, j = iArray.length - 1, middle = iArray.length >>> 1; i < middle; i++, j--){
+          int temp = iArray[i];
+          iArray[i] = iArray[j];
+          iArray[j] = temp;
+      }
+
+      System.out.println("\n\nCounting divisors");
+      int x = 24;
+      int count = 0;
+      for(int i = 1; i <= x; i++){
+          if(x% i == 0){
+              System.out.println("i: "+i);
+              count++;
+          }
+      }
+      System.out.print("\nDivisor count: "+count);
+      int[][] studentGrades = {{76, 52, 69, 83, 45, 90}, {22, 71, 67, 59, 40}, {53, 87, 91, 67, 89}};
+      for(int i = 0; i < studentGrades.length; i++){
+          int max = 0;
+          System.out.println("\n\nDisplaying grades of section " + i);
+          for(int j = 0; j < studentGrades[i].length; j++){
+              if(studentGrades[i][j] > max) {
+                  max = studentGrades[i][j];
+              }
+              System.out.println(studentGrades[i][j]+ " ");
+          }
+          System.out.print("Max: "+max);
+
+      }
+
+      // for-each: Convenient Iteration
+      System.out.println("\n\nFor Each..");
+      for (int i : iArray){
+          System.out.print(i+ " ");
+      }
+
+      int[] dice1 ={1, 2, 3, 4, 5, 6};
+      int[] dice2 ={1, 2, 3, 4, 5, 6};
+      for(int i = 0; i < dice1.length; i++){
+          for(int j = 0; j < dice2.length; j++){
+              System.out.println(dice1[i]+ " "+dice2[j]);
+          }
+      }
+
+      for(int i : dice1){
+          for(int j : dice2){
+              System.out.println(i+ " "+j);
+          }
+      }
+
+      // parallel iteration
+      for (int i = 0, j = 0; i < dice1.length && j < dice2.length; i++, j++){
+          System.out.println(dice1[1]+ " "+ dice2[j]);
+      }
+
 
   }       
 }
