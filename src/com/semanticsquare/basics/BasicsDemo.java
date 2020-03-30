@@ -327,6 +327,40 @@ class BasicsDemo {
         int res = ( x < y) ? x : y;
         return res;
     }
+    static void labeledBreak(){
+        System.out.println("\nInsideLabeledBreak");
+        int num = 0;
+        outermost: for ( int i = 0; i < 10; i++){
+            for ( int j = 0; j < 10; j++){
+                if(i == 5 && j == 5){
+                    System.out.println("i: "+i);
+                    System.out.println("j: "+j);
+                    break outermost;
+
+                }
+                num++;
+            }
+
+        }
+        System.out.println("Num: "+num);
+    }
+    static void labeledContinue(){
+        System.out.println("\nInsideLabeledBreak");
+        int num = 0;
+        outermost: for ( int i = 0; i < 10; i++){
+            for ( int j = 0; j < 10; j++){
+                if(i == 5 && j == 5){
+                    System.out.println("i: "+i);
+                    System.out.println("j: "+j);
+                    continue outermost;
+
+                }
+                num++;
+            }
+
+        }
+        System.out.println("Num: "+num);
+    }
   public static void main(String[] args) {
         /*
         print();
@@ -435,6 +469,9 @@ class BasicsDemo {
       for (int i = 0, j = 0; i < dice1.length && j < dice2.length; i++, j++){
           System.out.println(dice1[1]+ " "+ dice2[j]);
       }
+      labeledBreak();
+      labeledContinue();
+
 
 
   }       
