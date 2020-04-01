@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Date;
+
 class BasicsDemo {
     static void typeCasting(){
         System.out.println("\n\nInside Type Casting...");
@@ -360,6 +363,7 @@ class BasicsDemo {
 
         }
         System.out.println("Num: "+num);
+
     }
   public static void main(String[] args) {
         /*
@@ -472,6 +476,10 @@ class BasicsDemo {
       labeledBreak();
       labeledContinue();
 
+      // Accessing Package
+      Date date;
+      ArrayList list;
+      java.sql.Date date1;
 
 
   }       
