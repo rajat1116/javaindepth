@@ -1,3 +1,5 @@
+package com.semanticsquare.basics.BasicsDemo;
+
 class BasicsDemo {
     static void typeCasting(){
         System.out.println("\n\nInside Type Casting...");
